@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "report": {
+      "REPORT00": {
+        "authors": [],
+        "id": "REPORT00",
+        "image_url": "s5c",
+        "news_site": "s5d",
+        "published_at": "s5e",
+        "summary": "s5f",
+        "title": "s60",
+        "updated_at": "s61",
+        "url": "s62"
+      },
+      "REPORT01": {
+        "authors": [],
+        "id": "REPORT01",
+        "image_url": "sb6",
+        "news_site": "sb7",
+        "published_at": "sb8",
+        "summary": "sb9",
+        "title": "sba",
+        "updated_at": "sbb",
+        "url": "sbc"
+      },
+      "REPORT02": {
+        "authors": [],
+        "id": "REPORT02",
+        "image_url": "s110",
+        "news_site": "s111",
+        "published_at": "s112",
+        "summary": "s113",
+        "title": "s114",
+        "updated_at": "s115",
+        "url": "s116"
+      }
+    }
+  },
+  "new": {
+    "report": {
+      "report_ref01": {
+        "authors": [],
+        "image_url": "s16a",
+        "news_site": "s16b",
+        "published_at": "s16c",
+        "summary": "s16d",
+        "title": "s16e",
+        "updated_at": "s16f",
+        "url": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /v4/reports/": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v4/reports/{id}/": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+# Entity: info
+
+main: kit: entity: info: {
+
+  alias: field: {}
+
+  fields: {
+    news_sites: {
+      h: "News Sites"
+      n: "news_sites"
+      r: true
+      t: "`$ARRAY`"
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "info"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v4/info/"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v4/info/"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v4"
+            }
+            {
+              lit: "info"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.news_sites`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

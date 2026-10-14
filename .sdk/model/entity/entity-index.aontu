@@ -1,0 +1,6 @@
+# Entity Models
+
+@"./article.aontu"
+@"./blog.aontu"
+@"./info.aontu"
+@"./report.aontu"

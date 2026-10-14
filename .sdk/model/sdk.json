@@ -1,0 +1,1795 @@
+{
+  "NAME": "SPACEFLIGHT-NEWS",
+  "Name": "SpaceflightNews",
+  "def": "snapi.json",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "article": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "authors": {
+              "a": true,
+              "h": "Authors",
+              "n": "authors",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 6,
+                "depth": 5
+              }
+            },
+            "events": {
+              "a": true,
+              "h": "Events",
+              "n": "events",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "featured": {
+              "a": true,
+              "h": "Featured",
+              "n": "featured",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "ro": true,
+              "t": "`$INTEGER`"
+            },
+            "image_url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Image Url",
+              "n": "image_url",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "launches": {
+              "a": true,
+              "h": "Launches",
+              "n": "launches",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "news_site": {
+              "a": true,
+              "h": "News Site",
+              "n": "news_site",
+              "r": true,
+              "ro": true,
+              "t": "`$STRING`"
+            },
+            "published_at": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Published At",
+              "n": "published_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "updated_at": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Updated At",
+              "n": "updated_at",
+              "r": true,
+              "ro": true,
+              "t": "`$STRING`"
+            },
+            "url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "article",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/articles/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "event",
+                        "or": "event",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "has_event",
+                        "or": "has_event",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "has_launch",
+                        "or": "has_launch",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "is_featured",
+                        "or": "is_featured",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "launch",
+                        "or": "launch",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "news_site",
+                        "or": "news_site",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "news_site_exclude",
+                        "or": "news_site_exclude",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "ordering",
+                        "or": "ordering",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_gt",
+                        "or": "published_at_gt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_gte",
+                        "or": "published_at_gte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_lt",
+                        "or": "published_at_lt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_lte",
+                        "or": "published_at_lte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contain",
+                        "or": "summary_contains",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contains_all",
+                        "or": "summary_contains_all",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contains_one",
+                        "or": "summary_contains_one",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contain",
+                        "or": "title_contains",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contains_all",
+                        "or": "title_contains_all",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contains_one",
+                        "or": "title_contains_one",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_gt",
+                        "or": "updated_at_gt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_gte",
+                        "or": "updated_at_gte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_lt",
+                        "or": "updated_at_lt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_lte",
+                        "or": "updated_at_lte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/articles/",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "articles"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.results`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/articles/{id}/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/articles/{id}/",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "articles"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "blog": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "authors": {
+              "a": true,
+              "h": "Authors",
+              "n": "authors",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 6,
+                "depth": 5
+              }
+            },
+            "events": {
+              "a": true,
+              "h": "Events",
+              "n": "events",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "featured": {
+              "a": true,
+              "h": "Featured",
+              "n": "featured",
+              "r": false,
+              "t": "`$BOOLEAN`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "ro": true,
+              "t": "`$INTEGER`"
+            },
+            "image_url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Image Url",
+              "n": "image_url",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "launches": {
+              "a": true,
+              "h": "Launches",
+              "n": "launches",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "news_site": {
+              "a": true,
+              "h": "News Site",
+              "n": "news_site",
+              "r": true,
+              "ro": true,
+              "t": "`$STRING`"
+            },
+            "published_at": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Published At",
+              "n": "published_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "updated_at": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Updated At",
+              "n": "updated_at",
+              "r": true,
+              "ro": true,
+              "t": "`$STRING`"
+            },
+            "url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "blog",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/blogs/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "event",
+                        "or": "event",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "has_event",
+                        "or": "has_event",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "has_launch",
+                        "or": "has_launch",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "is_featured",
+                        "or": "is_featured",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "launch",
+                        "or": "launch",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "news_site",
+                        "or": "news_site",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "news_site_exclude",
+                        "or": "news_site_exclude",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "ordering",
+                        "or": "ordering",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_gt",
+                        "or": "published_at_gt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_gte",
+                        "or": "published_at_gte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_lt",
+                        "or": "published_at_lt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_lte",
+                        "or": "published_at_lte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contain",
+                        "or": "summary_contains",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contains_all",
+                        "or": "summary_contains_all",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contains_one",
+                        "or": "summary_contains_one",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contain",
+                        "or": "title_contains",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contains_all",
+                        "or": "title_contains_all",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contains_one",
+                        "or": "title_contains_one",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_gt",
+                        "or": "updated_at_gt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_gte",
+                        "or": "updated_at_gte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_lt",
+                        "or": "updated_at_lt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_lte",
+                        "or": "updated_at_lte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/blogs/",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "blogs"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.results`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/blogs/{id}/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/blogs/{id}/",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "blogs"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "info": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "news_sites": {
+              "a": true,
+              "h": "News Sites",
+              "n": "news_sites",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "version": {
+              "a": true,
+              "h": "Version",
+              "n": "version",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "info",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/info/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/info/",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "info"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.news_sites`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "report": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "authors": {
+              "a": true,
+              "h": "Authors",
+              "n": "authors",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 6,
+                "depth": 5
+              }
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "ro": true,
+              "t": "`$INTEGER`"
+            },
+            "image_url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Image Url",
+              "n": "image_url",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "news_site": {
+              "a": true,
+              "h": "News Site",
+              "n": "news_site",
+              "r": true,
+              "ro": true,
+              "t": "`$STRING`"
+            },
+            "published_at": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Published At",
+              "n": "published_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "updated_at": {
+              "a": true,
+              "fo": "date-time",
+              "h": "Updated At",
+              "n": "updated_at",
+              "r": true,
+              "ro": true,
+              "t": "`$STRING`"
+            },
+            "url": {
+              "a": true,
+              "fo": "uri",
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "report",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/reports/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "news_site",
+                        "or": "news_site",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "news_site_exclude",
+                        "or": "news_site_exclude",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "offset",
+                        "or": "offset",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "ordering",
+                        "or": "ordering",
+                        "r": false,
+                        "t": "`$ARRAY`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_gt",
+                        "or": "published_at_gt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_gte",
+                        "or": "published_at_gte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_lt",
+                        "or": "published_at_lt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "published_at_lte",
+                        "or": "published_at_lte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contain",
+                        "or": "summary_contains",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contains_all",
+                        "or": "summary_contains_all",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "summary_contains_one",
+                        "or": "summary_contains_one",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contain",
+                        "or": "title_contains",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contains_all",
+                        "or": "title_contains_all",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "title_contains_one",
+                        "or": "title_contains_one",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_gt",
+                        "or": "updated_at_gt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_gte",
+                        "or": "updated_at_gte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_lt",
+                        "or": "updated_at_lt",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "updated_at_lte",
+                        "or": "updated_at_lte",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/reports/",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "reports"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.results`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /v4/reports/{id}/",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/v4/reports/{id}/",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "v4"
+                    },
+                    {
+                      "lit": "reports"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicArticleFlow": {
+          "active": true,
+          "entity": "article",
+          "key$": "BasicArticleFlow",
+          "kind": "basic",
+          "name": "BasicArticleFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "article_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "article_ref01",
+                "srcdatavar": "article_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "article01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-article_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicBlogFlow": {
+          "active": true,
+          "entity": "blog",
+          "key$": "BasicBlogFlow",
+          "kind": "basic",
+          "name": "BasicBlogFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "blog_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "blog_ref01",
+                "srcdatavar": "blog_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "blog01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-blog_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicInfoFlow": {
+          "active": true,
+          "entity": "info",
+          "key$": "BasicInfoFlow",
+          "kind": "basic",
+          "name": "BasicInfoFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "info_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicReportFlow": {
+          "active": true,
+          "entity": "report",
+          "key$": "BasicReportFlow",
+          "kind": "basic",
+          "name": "BasicReportFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "report_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "report_ref01",
+                "srcdatavar": "report_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "report01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-report_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "description": "The Spaceflight News API.",
+        "servers": [
+          {
+            "url": "https://api.spaceflightnewsapi.net"
+          }
+        ],
+        "title": "Spaceflight News API",
+        "version": "4.33.0 (v4)",
+        "website": "https://spaceflightnewsapi.net"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "Yele Zhong",
+        "security": "",
+        "url": "https://github.com/DEOWL-kan"
+      },
+      "repo": {
+        "host": "github.com",
+        "path": "DEOWL-kan/spaceflight-news-sdk"
+      },
+      "target": {
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "spaceflight-news",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "spaceflight-news-sdk",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "\nAn unofficial TypeScript SDK for the [Spaceflight News API](https://spaceflightnewsapi.net) (SNAPI) v4, generated with the [Voxgig SDK Generator](https://voxgig.com/sdk). No API key is needed.\n\n**Run the example** (Node.js 24 LTS):\n\n```bash\ncd ts && npm install && npm run build && cd ..\nnode examples/list-articles.ts\n```\n\n**Regenerate** from the live spec:\n\n```bash\ncd .sdk && npm install\nnode build/fetch-def.mjs   # writes def/snapi.json\nnpm run generate           # writes ../ts\n```\n\n`fetch-def.mjs` keeps the spec's interface (paths, parameters, schemas) and drops its prose (`description`, `example`), because the spec text carries no stated license. The spec itself is not committed, so `.sdk/def/` is empty until you run the script.\n\n**Attribution.** SNAPI is run by [The Space Devs](https://thespacedevs.com); its articles, blogs and reports are aggregated from third-party publishers and belong to them. The MIT license here covers this repository's own code only; the generator templates are Voxgig's, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).\n",
+        "docs_url": "https://api.spaceflightnewsapi.net/v4/docs/",
+        "entity_desc": {},
+        "homepage": "https://spaceflightnewsapi.net",
+        "meta_source": "",
+        "summary": "",
+        "tagline": "",
+        "title": "",
+        "website": ""
+      }
+    }
+  },
+  "name": "spaceflight-news",
+  "name-": "spaceflight-news",
+  "name_": "spaceflight_news",
+  "name__orig": "spaceflight-news",
+  "origin": "voxgig-sdk"
+}

@@ -1,0 +1,22 @@
+# BasicInfoFlow
+
+main: kit: flow: BasicInfoFlow:
+{
+  entity: "info",
+  kind: "basic",
+  name: "BasicInfoFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "info_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicInfoFlow"
+}

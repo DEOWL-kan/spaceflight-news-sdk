@@ -1,0 +1,77 @@
+{
+  "existing": {
+    "blog": {
+      "BLOG00": {
+        "authors": [],
+        "events": [],
+        "featured": true,
+        "id": "BLOG00",
+        "image_url": "s7c",
+        "launches": [],
+        "news_site": "s7e",
+        "published_at": "s7f",
+        "summary": "s80",
+        "title": "s81",
+        "updated_at": "s82",
+        "url": "s83"
+      },
+      "BLOG01": {
+        "authors": [],
+        "events": [],
+        "featured": true,
+        "id": "BLOG01",
+        "image_url": "sf4",
+        "launches": [],
+        "news_site": "sf6",
+        "published_at": "sf7",
+        "summary": "sf8",
+        "title": "sf9",
+        "updated_at": "sfa",
+        "url": "sfb"
+      },
+      "BLOG02": {
+        "authors": [],
+        "events": [],
+        "featured": true,
+        "id": "BLOG02",
+        "image_url": "s16c",
+        "launches": [],
+        "news_site": "s16e",
+        "published_at": "s16f",
+        "summary": "s170",
+        "title": "s171",
+        "updated_at": "s172",
+        "url": "s173"
+      }
+    }
+  },
+  "new": {
+    "blog": {
+      "blog_ref01": {
+        "authors": [],
+        "events": [],
+        "featured": true,
+        "image_url": "s1e4",
+        "launches": [],
+        "news_site": "s1e6",
+        "published_at": "s1e7",
+        "summary": "s1e8",
+        "title": "s1e9",
+        "updated_at": "s1ea",
+        "url": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "GET /v4/blogs/": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v4/blogs/{id}/": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

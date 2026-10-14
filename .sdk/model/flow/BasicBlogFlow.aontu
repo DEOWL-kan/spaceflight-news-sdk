@@ -1,0 +1,44 @@
+# BasicBlogFlow
+
+main: kit: flow: BasicBlogFlow:
+{
+  entity: "blog",
+  kind: "basic",
+  name: "BasicBlogFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "blog_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "blog_ref01",
+        srcdatavar: "blog_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "blog01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-blog_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicBlogFlow"
+}

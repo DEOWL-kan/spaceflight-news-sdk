@@ -1,0 +1,363 @@
+# Entity: article
+
+main: kit: entity: article: {
+
+  alias: field: {}
+
+  fields: {
+    authors: {
+      h: "Authors"
+      n: "authors"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 6
+        depth: 5
+      }
+    }
+    events: {
+      h: "Events"
+      n: "events"
+      r: true
+      t: "`$ARRAY`"
+    }
+    featured: {
+      h: "Featured"
+      n: "featured"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      ro: true
+      t: "`$INTEGER`"
+    }
+    image_url: {
+      fo: "uri"
+      h: "Image Url"
+      n: "image_url"
+      r: true
+      t: "`$STRING`"
+    }
+    launches: {
+      h: "Launches"
+      n: "launches"
+      r: true
+      t: "`$ARRAY`"
+    }
+    news_site: {
+      h: "News Site"
+      n: "news_site"
+      r: true
+      ro: true
+      t: "`$STRING`"
+    }
+    published_at: {
+      fo: "date-time"
+      h: "Published At"
+      n: "published_at"
+      r: true
+      t: "`$STRING`"
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "date-time"
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      ro: true
+      t: "`$STRING`"
+    }
+    url: {
+      fo: "uri"
+      h: "Url"
+      n: "url"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "article"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v4/articles/"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "event"
+                or: "event"
+                r: false
+                t: "`$ARRAY`"
+              }
+              {
+                k: "query"
+                n: "has_event"
+                or: "has_event"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "has_launch"
+                or: "has_launch"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "is_featured"
+                or: "is_featured"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                k: "query"
+                n: "launch"
+                or: "launch"
+                r: false
+                t: "`$ARRAY`"
+              }
+              {
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "news_site"
+                or: "news_site"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "news_site_exclude"
+                or: "news_site_exclude"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "ordering"
+                or: "ordering"
+                r: false
+                t: "`$ARRAY`"
+              }
+              {
+                k: "query"
+                n: "published_at_gt"
+                or: "published_at_gt"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "published_at_gte"
+                or: "published_at_gte"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "published_at_lt"
+                or: "published_at_lt"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "published_at_lte"
+                or: "published_at_lte"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "summary_contain"
+                or: "summary_contains"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "summary_contains_all"
+                or: "summary_contains_all"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "summary_contains_one"
+                or: "summary_contains_one"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "title_contain"
+                or: "title_contains"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "title_contains_all"
+                or: "title_contains_all"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "title_contains_one"
+                or: "title_contains_one"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "updated_at_gt"
+                or: "updated_at_gt"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "updated_at_gte"
+                or: "updated_at_gte"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "updated_at_lt"
+                or: "updated_at_lt"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "updated_at_lte"
+                or: "updated_at_lte"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v4/articles/"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v4"
+            }
+            {
+              lit: "articles"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.results`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v4/articles/{id}/"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v4/articles/{id}/"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "v4"
+            }
+            {
+              lit: "articles"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,6 @@
+# Flows
+
+@"./BasicArticleFlow.aontu"
+@"./BasicBlogFlow.aontu"
+@"./BasicInfoFlow.aontu"
+@"./BasicReportFlow.aontu"

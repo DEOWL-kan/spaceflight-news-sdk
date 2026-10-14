@@ -1,0 +1,19 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: "The Spaceflight News API."
+      servers: [
+        {
+          url: "https://api.spaceflightnewsapi.net"
+        }
+      ]
+      title: "Spaceflight News API"
+      version: "4.33.0 (v4)"
+      website: "https://spaceflightnewsapi.net"
+    }
+  }
+}
+
